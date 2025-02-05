@@ -86,7 +86,7 @@ header {
     background: url('images/renner.png') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 150px 20px; /* Reduzido para um valor mais razoável */
+    padding: 500px 500px; /* Reduzido para um valor mais razoável */
     position: relative;
   }
   
@@ -209,7 +209,7 @@ header {
 /* Bloco com Imagem de Fundo e Sobreposição */
 #highlight-block {
     position: relative;
-    padding: 60px 20px; /* Reduzido para um valor mais razoável */
+    padding: 300px 300px; /* Reduzido para um valor mais razoável */
     background: url('images/planofundo6.jpeg') no-repeat center center/cover;
     color: white;
     text-align: center;
