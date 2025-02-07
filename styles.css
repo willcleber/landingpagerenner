@@ -208,96 +208,64 @@ header {
 
 /* Bloco com Imagem de Fundo e Sobreposição */
 #highlight-block {
-    position: relative;
-    padding: 300px 300px; /* Reduzido para um valor mais razoável */
-    background: url('images/planofundo6.jpeg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    overflow: hidden;
+  position: relative;
+  padding: 60px 20px; /* Padding reduzido para telas maiores */
+  background: url('images/planofundo6.jpeg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+#highlight-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+  z-index: 1;
+}
+
+.highlight-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px; /* Altura mínima ajustada */
+}
+
+.highlight-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.overlay-image {
+  max-width: 100%; /* Garante responsividade */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #highlight-block {
+    padding: 40px 10px; /* Padding reduzido para telas menores */
   }
-  
-  #highlight-block::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-  
-  .highlight-container {
-    position: relative;
-    z-index: 2;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px; /* Altura mínima ajustada */
-  }
-  
+
   .highlight-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Tamanho da fonte reduzido */
   }
-  
+
   .overlay-image {
-    max-width: 100%; /* Garante responsividade */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
+    max-width: 150px; /* Largura da imagem ajustada */
   }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .highlight-title {
-      font-size: 2rem;
-    }
-  
-    .overlay-image {
-      max-width: 150px; /* Ajusta a largura da imagem em telas menores */
-    }
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .gallery-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .image-content img {
-      max-width: 100%;
-    }
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .gallery-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .image-content img {
-      max-width: 100%;
-    }
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .gallery-container {
-      flex-direction: column; /* Empilha os elementos verticalmente */
-      text-align: center; /* Centraliza o texto */
-    }
-  
-    .image-content img {
-      max-width: 100%; /* Garante que a imagem seja responsiva */
-    }
-  }
+}
   
   /* Sobre Mim */
   #about {
