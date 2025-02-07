@@ -18,7 +18,7 @@
     padding: 0 20px;
   }
 
-/* Bloco com Vídeo */
+/* Bloco com Vídeo * bloco 1/
 #video-block {
   position: relative;
   overflow: hidden;
@@ -116,65 +116,13 @@
     padding: 30px; /* Aumenta o padding para telas maiores */
   }
 }
-  
-  /* Header */
-header {
-    background: url('images/renner.png') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 500px 500px; /* Reduzido para um valor mais razoável */
-    position: relative;
-  }
-  
-  header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
-  header .container {
-    text-align: right; /* Alinha o texto à direita */
-  }
-  
-  header h1,
-  header p,
-  header .btn {
-    margin-left: auto; /* Garante alinhamento à direita */
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    header {
-      text-align: center; /* Centraliza o texto em telas menores */
-      padding: 100px 20px; /* Reduz o padding */
-    }
-  
-    header .container {
-      text-align: center; /* Centraliza o conteúdo */
-    }
-  
-    header h1,
-    header p,
-    header .btn {
-      margin-left: 0; /* Remove o alinhamento à direita */
-    }
-  }
-  
-  /* Seções */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-  }
 
-  /* Bloco com Foto e Texto */
+
+  /* Bloco com Foto e Texto -bloco 2*/
 
 #gallery-block {
   padding: 60px 20px;
-  background: url('images/planofundo1.jpg') no-repeat center center/cover; /* Imagem de fundo */
+  background: url('images/fundopreto-azul.jpeg') no-repeat center center/cover; /* Imagem de fundo */
   color: white; /* Cor do texto para contraste */
   position: relative;
 }
@@ -265,198 +213,10 @@ header {
   }
 }
 
-/* Bloco com Imagem de Fundo e Sobreposição */
-#highlight-block {
-  position: relative;
-  padding: 60px 20px; /* Padding reduzido para telas maiores */
-  background: url('images/planofundo6.jpeg') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
-
-#highlight-block::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
-  z-index: 1;
-}
-
-.highlight-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px; /* Altura mínima ajustada */
-}
-
-.highlight-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.overlay-image {
-  max-width: 100%; /* Garante responsividade */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  #highlight-block {
-    padding: 40px 10px; /* Padding reduzido para telas menores */
-  }
-
-  .highlight-title {
-    font-size: 2rem; /* Tamanho da fonte reduzido */
-  }
-
-  .overlay-image {
-    max-width: 150px; /* Largura da imagem ajustada */
-  }
-}
-  
-  /* Sobre Mim */
-  #about {
-    background: url('images/planofundo2.jpg') no-repeat center center/cover;
-    color: white;
-    position: relative;
-  }
-  
-  #about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
-  #about .about-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  #about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  #about p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-  
-  /* Palestras */
-.talks-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .talk-card {
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .talk-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada ao hover */
-  }
-  
-  .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    transition: background 0.3s ease;
-  }
-  
-  .card-content:hover {
-    background: rgba(0, 0, 0, 0.9); /* Escurece o overlay ao passar o mouse */
-  }
-  
-  .card-content h3 {
-    font-size: 1.5rem;
-  }
-
-/* Bloco com Frase na Parte Superior */
-#recognition-block {
-  position: relative;
-  padding: 60px 20px;
-  background: url('images/planofundo4.jpg') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
-
-#recognition-block::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.recognition-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 300px;
-}
-
-.recognition-title {
-  font-size: 2.5rem;
-  margin-top: 20px;
-  position: relative;
-  z-index: 3;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .recognition-title {
-    font-size: 2rem;
-  }
-
-  #recognition-block {
-    padding: 40px 10px;
-  }
-}
-  
-/* Depoimentos */
+/* Depoimentos - bloco 3 */
 #testimonials {
   padding: 60px 20px;
-  background: url('images/planofundo5.jpg') no-repeat center center/cover;
+  background: url('images/fundoazul-preto.jpeg') no-repeat center center/cover;
   color: white;
   text-align: center;
   position: relative;
@@ -536,8 +296,124 @@ header {
     height: 200px; /* Altura fixa para vídeos em telas menores */
   }
 }
+
+/* Bloco com Imagem de Fundo e Sobreposição - bloco 4 */
+#highlight-block {
+  position: relative;
+  padding: 60px 20px; /* Padding reduzido para telas maiores */
+  background: url('images/fundopreto-azul.jpeg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+#highlight-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+  z-index: 1;
+}
+
+.highlight-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px; /* Altura mínima ajustada */
+}
+
+.highlight-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.overlay-image {
+  max-width: 100%; /* Garante responsividade */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #highlight-block {
+    padding: 40px 10px; /* Padding reduzido para telas menores */
+  }
+
+  .highlight-title {
+    font-size: 2rem; /* Tamanho da fonte reduzido */
+  }
+
+  .overlay-image {
+    max-width: 150px; /* Largura da imagem ajustada */
+  }
+}
   
-  /* Contato */
+
+
+/* Bloco com Frase na Parte Superior - bloco 5*/
+#recognition-block {
+  position: relative;
+  padding: 60px 20px;
+  background: url('images/fundoazul-preto.jpeg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+#recognition-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.recognition-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 300px;
+}
+
+.recognition-title {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .recognition-title {
+    font-size: 2rem;
+  }
+
+  #recognition-block {
+    padding: 40px 10px;
+  }
+}
+  
+
+  
+  /* Contato - bloco 6*/
 #contact {
   padding: 60px 20px;
   background: url('images/renner.png') no-repeat center center/cover; /* Imagem de fundo */
