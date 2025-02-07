@@ -88,14 +88,13 @@
   </section>
 
    <!-- Header -->
-   <header id="home">
+   <!-- <header id="home">
     <div class="container">
       <h1>Renner Silva</h1>
       <p>Palestrante Motivacional e Especialista em Liderança</p>
-      <!-- <p>TORNE-SE UM PALESTRANTE PROFISSIONAL COM AS TÉCNICAS DO MELHOR PALESTRANTE DO BRASIL.</p> -->
-      <!-- <a href="#contact" class="btn">Entre em Contato</a> -->
+      
     </div>
-  </header>
+  </header> -->
 
   <!-- Sobre
   <section id="about" class="section">
@@ -138,13 +137,16 @@
 
   <!-- Contato -->
   <section id="contact" class="section">
-    <h2>Entre em Contato</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Seu Nome" required>
-      <input type="email" placeholder="Seu Email" required>
-      <textarea placeholder="Sua Mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <div class="contact-container">
+      <h2>Entre em Contato</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Seu Nome" required>
+        <input type="email" id="email" placeholder="Seu Email" required>
+        <input type="tel" id="phone" placeholder="Seu Telefone" required>
+        <textarea id="message" placeholder="Sua Mensagem" required></textarea>
+        <button type="submit" id="send-button">Enviar</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
