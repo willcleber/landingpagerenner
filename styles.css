@@ -44,27 +44,32 @@
 
 .overlay {
   position: absolute;
-  bottom: 0; /* Alterado para fixar na parte inferior */
+  bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Overlay escuro para destacar o texto */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Alterado para alinhar o conteúdo ao topo do overlay */
+  justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
-  z-index: 1; /* Garante que o overlay fique acima do vídeo */
-  padding: 20px; /* Adicionado espaçamento interno para melhorar a aparência */
+  z-index: 1;
+  padding: 20px;
+  background: transparent; /* Fundo totalmente transparente */
+}
+
+.overlay h2,
+.overlay p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Adiciona sombra ao texto */
 }
 
 .overlay h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem); /* Tamanho responsivo */
   margin-bottom: 10px;
 }
 
 .overlay p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem); /* Tamanho responsivo */
   margin-bottom: 20px;
 }
 
@@ -79,6 +84,36 @@
 
 .overlay .btn:hover {
   transform: scale(1.1);
+}
+
+/* Ajustes específicos para telas menores (mobile) */
+@media (max-width: 768px) {
+  .overlay h2 {
+    font-size: 1.8rem; /* Tamanho menor para mobile */
+  }
+
+  .overlay p {
+    font-size: 1rem; /* Tamanho menor para mobile */
+  }
+
+  .overlay {
+    padding: 15px; /* Reduz o padding para telas menores */
+  }
+}
+
+/* Ajustes específicos para telas maiores (desktop) */
+@media (min-width: 1200px) {
+  .overlay h2 {
+    font-size: 2.5rem; /* Tamanho maior para desktop */
+  }
+
+  .overlay p {
+    font-size: 1.2rem; /* Tamanho maior para desktop */
+  }
+
+  .overlay {
+    padding: 30px; /* Aumenta o padding para telas maiores */
+  }
 }
   
   /* Header */
