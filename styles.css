@@ -18,7 +18,7 @@
     padding: 0 20px;
   }
 
-  /* Bloco com Vídeo */
+/* Bloco com Vídeo */
 #video-block {
   position: relative;
   overflow: hidden;
@@ -38,24 +38,24 @@
   left: 50%;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Garante que o vídeo cubra toda a área sem distorção */
+  object-fit: contain; /* Alterado de "cover" para "contain" para evitar cortes */
   transform: translate(-50%, -50%);
 }
 
 .overlay {
   position: absolute;
-  top: 0;
+  bottom: 0; /* Fixa o overlay na parte inferior */
   left: 0;
   width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.6); /* Overlay escuro para destacar o texto */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Alinha o conteúdo ao topo do overlay */
   align-items: center;
   color: white;
   text-align: center;
   z-index: 1; /* Garante que o overlay fique acima do vídeo */
+  padding: 20px; /* Adicionado espaçamento interno para melhorar a aparência */
 }
 
 .overlay h2 {
@@ -79,6 +79,21 @@
 
 .overlay .btn:hover {
   transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .video-container {
+    padding-top: 75%; /* Altera a proporção para 4:3 em telas menores */
+  }
+
+  .overlay h2 {
+    font-size: 2rem; /* Reduz o tamanho do título */
+  }
+
+  .overlay p {
+    font-size: 1rem; /* Reduz o tamanho do parágrafo */
+  }
 }
   
   /* Header */
@@ -345,76 +360,72 @@ header {
   
 /* Depoimentos */
 #testimonials {
-    padding: 60px 20px;
-    background: url('images/planofundo5.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    position: relative;
-  }
-  
-  #testimonials::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-  
-  #testimonials h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 2;
-  }
-  
+  padding: 60px 20px;
+  background: url('images/planofundo5.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+#testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+.testimonial video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover; /* Garante que o vídeo cubra a área sem distorção */
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    position: relative;
-    z-index: 2;
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
   }
-  
-  .testimonial {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .testimonial iframe,
+
   .testimonial video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    height: 200px; /* Altura fixa para vídeos em telas menores */
   }
-  
-  .testimonial p {
-    font-size: 1.2rem;
-    color: white;
-    margin-top: 0;
-  }
-  
-  /* Animação do Slider */
-  @keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .testimonial-grid {
-      grid-template-columns: 1fr; /* Uma coluna em telas menores */
-    }
-  }
+}
   
   /* Contato */
 #contact {
