@@ -427,7 +427,7 @@
   
 
   
-  /* Contato - bloco 6*/
+/* Contato - bloco 6 */
 #contact {
   padding: 60px 20px;
   background: url('images/renner.png') no-repeat center center/cover; /* Imagem de fundo */
@@ -459,7 +459,7 @@
 }
 
 #contact h2 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Tamanho padrão para desktop */
   margin-bottom: 20px;
 }
 
@@ -492,6 +492,26 @@
 
 #contact-form button:hover {
   background: #128c7e; /* Cor mais escura do WhatsApp */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #contact {
+    padding: 40px 10px; /* Reduz o padding para telas menores */
+  }
+
+  #contact h2 {
+    font-size: 1.1rem; /* Tamanho menor para mobile */
+  }
+
+  .contact-container {
+    padding: 20px; /* Reduz o padding interno do container */
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte dos inputs */
+  }
 }
   
   /* Footer */
