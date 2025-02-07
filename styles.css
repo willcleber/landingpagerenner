@@ -38,19 +38,19 @@
   left: 50%;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Alterado de "cover" para "contain" para evitar cortes */
+  object-fit: cover; /* Garante que o vídeo cubra toda a área sem distorção */
   transform: translate(-50%, -50%);
 }
 
 .overlay {
   position: absolute;
-  bottom: 0; /* Fixa o overlay na parte inferior */
+  bottom: 0; /* Alterado para fixar na parte inferior */
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.6); /* Overlay escuro para destacar o texto */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Alinha o conteúdo ao topo do overlay */
+  justify-content: flex-start; /* Alterado para alinhar o conteúdo ao topo do overlay */
   align-items: center;
   color: white;
   text-align: center;
@@ -79,21 +79,6 @@
 
 .overlay .btn:hover {
   transform: scale(1.1);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .video-container {
-    padding-top: 75%; /* Altera a proporção para 4:3 em telas menores */
-  }
-
-  .overlay h2 {
-    font-size: 2rem; /* Reduz o tamanho do título */
-  }
-
-  .overlay p {
-    font-size: 1rem; /* Reduz o tamanho do parágrafo */
-  }
 }
   
   /* Header */
@@ -357,6 +342,57 @@ header {
   .card-content h3 {
     font-size: 1.5rem;
   }
+
+/* Bloco com Frase na Parte Superior */
+#recognition-block {
+  position: relative;
+  padding: 60px 20px;
+  background: url('images/planofundo4.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+#recognition-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.recognition-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 300px;
+}
+
+.recognition-title {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .recognition-title {
+    font-size: 2rem;
+  }
+
+  #recognition-block {
+    padding: 40px 10px;
+  }
+}
   
 /* Depoimentos */
 #testimonials {
