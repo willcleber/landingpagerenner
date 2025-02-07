@@ -34,7 +34,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
   const encodedMessage = encodeURIComponent(whatsappMessage);
 
   // Número de telefone do WhatsApp
-  const phoneNumber = '+5562992727449';
+  const phoneNumber = '+5564993180501';
 
   // Redireciona para o WhatsApp
   window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');

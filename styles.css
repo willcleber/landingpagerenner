@@ -354,13 +354,14 @@
   }
 
   .overlay-image {
-    max-width: 150px; /* Largura da imagem ajustada */
+    max-width: 80%; /* Aumenta o tamanho da imagem no mobile */
+    margin-top: 10px; /* Reduz o espaçamento superior */
   }
 }
   
 
 
-/* Bloco com Frase na Parte Superior - bloco 5*/
+/* Bloco com Frase na Parte Superior - bloco 5 */
 #recognition-block {
   position: relative;
   padding: 60px 20px;
@@ -400,6 +401,13 @@
   z-index: 3;
 }
 
+.overlay-image {
+  width: 80%; /* Largura padrão para desktop */
+  max-width: 600px; /* Limita o tamanho máximo da imagem */
+  margin-top: 20px;
+  z-index: 3;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .recognition-title {
@@ -408,6 +416,12 @@
 
   #recognition-block {
     padding: 40px 10px;
+  }
+
+  .overlay-image {
+    width: 100%; /* Aumenta a largura da imagem para ocupar mais espaço em telas menores */
+    max-width: none; /* Remove o limite de largura máxima */
+    margin-top: 10px; /* Reduz o espaçamento superior */
   }
 }
   
