@@ -514,7 +514,7 @@ header {
 /* Ajustes específicos para telas menores (mobile) */
 @media (max-width: 768px) {
   #testimonials h2 {
-    font-size: 1.8rem; /* Tamanho menor para mobile */
+    font-size: 1.1rem; /* Tamanho menor para mobile */
   }
 
   .testimonial-grid {
